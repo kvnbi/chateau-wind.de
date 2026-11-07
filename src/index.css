@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 94%;
+    --foreground: 0 0% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    --primary: 42 52% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 40 33% 94%;
+    --muted-foreground: 0 0% 41%;
+    --accent: 40 33% 94%;
+    --accent-foreground: 0 0% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 24% 81%;
+    --input: 38 24% 81%;
+    --ring: 42 52% 53%;
+    --chart-1: 42 52% 53%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0px;
+
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Inter', 'Arial', 'Helvetica', sans-serif;
+
+    --color-black: #050505;
+    --color-charcoal: #252525;
+    --color-dark-section: #303030;
+    --color-dark-cta: #111111;
+    --color-ivory: #f5f1e8;
+    --color-white: #ffffff;
+    --color-gold: #c7a24a;
+    --color-warm-gold: #e5d6a5;
+    --color-main-text: #202020;
+    --color-muted-text: #686868;
+    --color-light-border: #ddd3bf;
+    --color-dark-border: rgba(255,255,255,0.12);
+    --color-gold-border: rgba(199,162,74,0.45);
+  }
+
+  .dark {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 93%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 42 52% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 19%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 93%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 42 52% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    overscroll-behavior: none;
+  }
+  body {
+    @apply text-foreground;
+    font-family: var(--font-body);
+    background-color: var(--color-ivory);
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+  @media (max-width: 768px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+  p, h1, h2, h3, h4, h5, li, a, span {
+    overflow-wrap: break-word;
+  }
+  a, button {
+    -webkit-tap-highlight-color: rgba(199, 162, 74, 0.18);
+  }
+  img {
+    max-width: 100%;
+  }
+}
